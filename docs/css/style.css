@@ -757,7 +757,7 @@ body::after {
 
 .form__btn-action {
   width: 100%;
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .form__btn-action .btn-action__btn {
