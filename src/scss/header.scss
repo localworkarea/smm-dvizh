@@ -1,0 +1,117 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  @include adaptiveValue("padding-top", 15, 10,0,$containerWidth,480);
+  @include adaptiveValue("padding-bottom", 15, 10,0,$containerWidth,480);
+  @media (min-width:$mobile){
+    background-color: #fff;
+    transition: background-color .4s linear;
+    &._header-scroll {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .header__first
+  &__first {
+    display: flex;
+    align-items: center;
+    gap: toRem(20);
+  }
+  // .header__last
+  &__last {
+  }
+	// .header__logo
+	&__logo {
+    @include adaptiveValue("width", 70, 44,0,$containerWidth,480);
+	}
+  // .header__txt
+  &__txt {
+    @media (min-width:$mobile){
+      font-size: toRem(14);
+      font-weight: 700;
+      line-height: normal;
+      max-width: toRem(140);
+    }
+    @media (max-width:$mobile){
+       display: none; 
+    }
+  }
+  // .header__start
+  &__start {
+  }
+  // .header__button
+  &__button {
+    @include adaptiveValue("min-width", 250, 150,2,$containerWidth,768.98);
+    height: auto;
+    @media (max-width:$mobile){
+       width: toRem(44);
+       height: toRem(44);
+       background-color: transparent;
+    }
+    span {
+      @media (min-width:$mobile){
+        font-size: toRem(14);
+      }
+      @media (max-width:$mobile){
+         display: none; 
+      }
+    }
+  }
+	// .header__phone
+	&__phone {
+    @media (min-width:$mobile){
+       display: none; 
+    }
+	}
+}
+.start-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  @include adaptiveValue("width", 340, 160);
+  @include adaptiveValue("padding-top", 37, 20,0,$containerWidth,480);
+  @include adaptiveValue("padding-bottom", 37, 20,0,$containerWidth,480);
+  padding-left: toRem(6);
+  padding-right: toRem(6);
+  background-color: #000;
+  border-radius: 0 0 toRem(30) toRem(30);
+  // .start-header__txt
+  &__txt {
+    text-align:center;
+    color: #fff;
+    @include adaptiveValue("font-size", 22, 16,0,480,375);    
+    font-weight: 700;
+    line-height: normal;
+    span {
+      color: $greenTwo;
+    }
+    br {
+      @media (min-width:$tablet){
+         display: none; 
+      }
+    }
+  }
+	// .start-header__icon
+	&__icon {
+    position: absolute;
+    bottom: toRem(-15);
+    @media (min-width:$mobile){
+      left: toRem(35);
+    }
+    @media (max-width:$mobile){
+       left: 50%;
+       transform: translateX(-50%); 
+    }
+	}
+}
+
+

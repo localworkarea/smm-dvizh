@@ -1,0 +1,67 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: toRem(2) solid transparent;
+  padding: toRem(16);
+  height: toRem(70);
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+
+  font-size: toRem(16);
+  font-weight: 700;
+  line-height: normal;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 0 toRem(14) toRem(14) 0;
+    z-index: 0;
+    background-color: #000;
+    transition: width .35s ease;
+  }
+  span {
+    z-index: 1;
+  }
+  @media (any-hover: hover){
+    &:hover{
+      color: #fff;
+      &::before {
+        width: 110%;
+      }
+    }
+  }
+  &_01 {
+    border-color: #000;
+    border-radius: toRem(14);
+    background-color: #fff;
+  }
+  // .btn_02
+  &_02 {
+    border-color: #000;
+    background-color: $green;
+    border-radius: toRem(20);
+  }
+  // .btn_03
+  &_03 {
+  }
+}
+
+
+.pdd {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+}
+
+.title-main {
+  text-align: center;
+  @include adaptiveValue("font-size", 40, 32,0,$containerWidth,480);
+  font-weight: 700;
+  line-height: normal;
+  @include adaptiveValue("margin-bottom", 50, 30,0,$containerWidth,480);
+}
