@@ -129,6 +129,7 @@
   }
 }
 
+// ===============================
 .about {
   background-color: $blue;
   background-image: url(../img/icon/line.svg);
@@ -226,6 +227,7 @@
   }
 }
 
+// ===============================
 .wants {
   // .wants__container
   &__container {
@@ -277,9 +279,10 @@
   }
 }
 
+// ===============================
 .space {
   background-color: #000;
-  background-image: url(../img/stars.png);
+  background-image: url(../img/stars-2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
@@ -554,18 +557,199 @@
       }
 }
 
-.btn-action {
-		// .btn-action__btn
-		&__btn {
-		}
-		// .btn-action__txt
-		&__txt {
-		}
-		// .btn-action__arrow
-		&__arrow {
-		}
-}
-.btn-action--white {
+// ===============================
+.how {
+  background-color: $pink;
+  // .how__container
+  &__container {
+  }
+  // .how__title
+  &__title {
+  }
+  // .how__list
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+  }
+  // .how__item
+  &__item {
+    border-radius: toRem(20);
+    overflow: hidden;
+    border: 2px solid #000;
+    background-color: #FFF;
+    display: grid;
+    @media (min-width:em(550.98)){
+      grid-template-columns: 1fr 40%;
+    }
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20,0,$containerWidth,480);
+    }
+    &:nth-child(1) {
+      .how__main {
+        @media (min-width:$mobileSmall){
+           max-width: toRem(340); 
+        }
+      }
+    }
+  }
+  // .how__body
+  &__body {
+    display: flex;
+    @include adaptiveValue("padding", 30, 20,0,$containerWidth,480);
+    @include adaptiveValue("gap", 20, 10,0,$containerWidth,480);
+  }
+  // .how__col
+  &__col {
+  }
+  // .how__num
+  &__num {
+    @include adaptiveValue("width", 70, 50,0,$containerWidth,480);
+    @include adaptiveValue("height", 70, 50,0,$containerWidth,480);
+    border-radius: 16px;
+    border: 2px solid #000;
+    background-color: $yellow;
+    @include adaptiveValue("font-size", 30, 18,0,$containerWidth,480);
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // .how__main
+  &__main {
+  }
+	// .how__sub-title
+	&__sub-title {
+    font-weight: 700;
+    line-height: normal;
+    @include adaptiveValue("font-size", 30, 18,0,$containerWidth,480);
+    @include adaptiveValue("margin-bottom", 20, 10,0,$containerWidth,480);
+	}
+  // .how__txt
+  &__txt {
+    @include adaptiveValue("font-size", 20, 14,0,$containerWidth,480);
+    font-weight: 400;
+    line-height: normal;
+  }
+	// .how__image
+	&__image {
+    border-radius: toRem(20);
+    border:toRem(2) solid #000;
+    overflow: hidden;
+    @media (min-width:em(550.98)){
+      margin: -2px -2px -2px 2px;
+    }
+    @media (max-width: em(550.98)){
+        margin: 0 toRem(20) toRem(20) toRem(20);
+    }
+	}
+  // .how__img
+  &__img {
+    aspect-ratio: 430 / 260;
+  }
+  // .how__btn-action
+  &__btn-action {
+  }
 }
 
-		
+// ===============================
+.form {
+  background-color: $yellow;
+  background-image: url(../img/icon/line.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-width:$mobile){
+    background-size: contain;
+  }
+  @media (max-width:$mobile){
+     background-size: cover; 
+  }
+  // .form__container
+  &__container {
+  }
+  // .form__title
+  &__title {
+  }
+  // .form__body
+  &__body {
+    display: grid;
+    gap: toRem(10);
+    @media (min-width:$mobile){
+      max-width: toRem(700);
+        margin: 0 auto;
+    }
+
+  }
+  // .form__item
+  &__item {
+  }
+  // .form__input
+  &__input {
+  }
+  // .form__items
+  &__items {
+    display: grid;
+    @media (min-width:em(550.98)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    gap: toRem(10);
+  }
+  // .form__btn-action
+  &__btn-action {
+    width: 100%;
+    max-width: 100%;
+    .btn-action__btn {
+      width: 100%;
+    }
+    .btn-action__arrow {
+      @media (max-width: em(900.98)){
+          display: none;
+      }
+    }
+    .btn-action__txt {
+      font-size: toRem(16);
+    }
+  }
+}
+
+
+//<INPUT>
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input {
+	border-radius: toRem(20);
+	width: 100%;
+	display: block;
+	padding: 0 toRem(30);
+	border: toRem(2) solid #000;
+  outline: none;
+  height: toRem(70);
+  font-size: toRem(16);
+  font-weight: 700;
+  line-height: normal;
+	&._form-focus {
+	}
+	&._form-error {
+	}
+}
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+.form__error {
+  font-size: toRem(16);
+  color: red;
+}

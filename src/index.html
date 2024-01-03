@@ -204,9 +204,127 @@
 						</div>
 					</div>
 				</section>
+				<section class="how pdd">
+					<div class="how__container">
+						<h2 class="how__title title-main">
+							Як це працює
+						</h2>
+						<ul class="how__list">
+							<li class="how__item">
+								<div class="how__body">
+									<div class="how__col">
+										<p class="how__num">
+											<span>01</span>
+										</p>
+									</div>
+									<div class="how__main">
+										<h3 class="how__sub-title">
+											Ти потрапляєш на OMG SMM-двіж
+										</h3>
+										<p class="how__txt">
+											Встигаєш зайняти місце та потрапити на SMM-ДВІЖ
+										</p>
+									</div>
+								</div>
+								<div class="how__image">
+									<img class="how__img ibg" data-src="@img/dvizh.jpg" alt="image">
+								</div>
+							</li>
+							<li class="how__item">
+								<div class="how__body">
+									<div class="how__col">
+										<p class="how__num">
+											<span>02</span>
+										</p>
+									</div>
+									<div class="how__main">
+										<h3 class="how__sub-title">
+											Проходиш інтенсив від експертів OMG, партнерів та представників брендів
+										</h3>
+										<p class="how__txt">
+											Ми розповідаємо тобі багато секретів та фіч про Community та Social Media Marketing
+										</p>
+									</div>
+								</div>
+								<div class="how__image">
+									<img class="how__img ibg" data-src="@img/brands.jpg" alt="image">
+								</div>
+							</li>
+							<li class="how__item">
+								<div class="how__body">
+									<div class="how__col">
+										<p class="how__num">
+											<span>03</span>
+										</p>
+									</div>
+									<div class="how__main">
+										<h3 class="how__sub-title">
+											Долучаєшся до OMG<br> Community
+										</h3>
+										<p class="how__txt">
+											Отримуєш OMG статус, який дозволяє розвиватися в професійному ком'юніті, SMM-ити та будувати проекти
+										</p>
+									</div>
+								</div>
+								<div class="how__image">
+									<img class="how__img ibg" data-src="@img/community.jpg" alt="image">
+								</div>
+							</li>
+						</ul>
+						<div class="how__btn-action btn-action">
+							<a href="#" class="btn-action__btn btn btn_02">
+								<span>Передзаписатись на SMM-двіж</span>
+							</a>
+							<p class="btn-action__txt">
+								Це безкоштовно та надасть можливість отримати найкращі умови на SMM-двіж
+							</p>
+							<img class="btn-action__arrow" data-src="@img/icon/arrow.svg" alt="arrow icon">
+						</div>
+					</div>
+				</section>
+				<section class="form pdd">
+					<div class="form__container">
+						<h2 class="form__title title-main">
+							Анткета передзапису
+						</h2>
+						<form data-dev data-popup-message="#form-message" action="#" method="POST">
+							<div class="form__body">
+								<div class="form__item">
+									<input type="text" name="name" data-error="Заповни поле" data-required placeholder="Ім'я та прізвище" class="form__input input">
+								</div>
+
+								<div class="form__items">
+									<div class="form__item">
+										<input type="email" name="email" data-error="Заповни поле" data-required="email" placeholder="E-mail" class="form__input input">
+									</div>
+									<div class="form__item">
+										<input type="tel" name="tel" data-error="Заповни поле" data-inputmask="'mask': '+38 (099) 999 99 99'" data-required placeholder="Телефон" class="form__input input">
+									</div>
+									<div class="form__item">
+										<input type="text" name="nick-tg" placeholder="Нік у Telegram" class="form__input input">
+									</div>
+									<div class="form__item">
+										<input type="url" name="url" placeholder="Посилання на Instagram" class="form__input input">
+									</div>
+								</div>
+
+								<div class="form__btn-action btn-action">
+									<button type="submit" class="btn-action__btn btn btn_02">
+										<span>Надіслати анкету</span>
+									</button>
+									<p class="btn-action__txt">
+										Це безкоштовно та надасть можливість отримати найкращі умови на SMM-двіж
+									</p>
+									<img class="btn-action__arrow" data-src="@img/icon/arrow.svg" alt="arrow icon">
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

@@ -9,10 +9,11 @@
   padding: toRem(16);
   height: toRem(70);
   transition: background-color .3s ease, border-color .3s ease, color .3s ease;
-
+  border-radius: toRem(20);
   font-size: toRem(16);
   font-weight: 700;
   line-height: normal;
+  text-align: center;
   &::before {
     content: "";
     position: absolute;
@@ -45,10 +46,19 @@
   &_02 {
     border-color: #000;
     background-color: $green;
-    border-radius: toRem(20);
   }
   // .btn_03
   &_03 {
+    border-color: #fff;
+    color: #fff;
+    &::before {
+      background-color: #fff;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        color: #000;
+      }
+    }
   }
 }
 
@@ -64,4 +74,44 @@
   font-weight: 700;
   line-height: normal;
   @include adaptiveValue("margin-bottom", 50, 30,0,$containerWidth,480);
+}
+
+.btn-action {
+  position: relative;
+  @media (min-width:$mobileSmall){
+     max-width: toRem(340); 
+     margin: 0 auto;
+  }
+		// .btn-action__btn
+		&__btn {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 14, 10,0,$containerWidth,480);
+      }
+		}
+		// .btn-action__txt
+		&__txt {
+      text-align: center;
+      font-size: toRem(12);
+      font-weight: 400;
+      line-height: normal;
+      .btn-action--white & {
+        color: #FFF;
+      }
+		}
+		// .btn-action__arrow
+		&__arrow {
+      @media (min-width:$mobileSmall){
+        position: absolute;
+        top: 50%;
+        left: -70px;
+        transform: translate(0, -45%);
+        height: toRem(84);
+        .btn-action--white & {
+          filter: invert(100%) sepia(6%) saturate(4609%) hue-rotate(265deg) brightness(108%) contrast(105%);
+        }
+      }
+      @media (max-width:$mobileSmall){
+         display: none; 
+      }
+		}
 }
