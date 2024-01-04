@@ -753,3 +753,112 @@ textarea {
   font-size: toRem(16);
   color: red;
 }
+
+// =========================================
+.thanks-page {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.thanks {
+  background-color: $pink;
+  flex: 1;
+  padding-top: toRem(125);
+  display: flex;
+  align-items: center;
+  // .thanks__container
+  &__container {
+    padding-bottom: toRem(50);
+  }
+	// .thanks__body
+	&__body {
+    @media (min-width:$mobile){
+       max-width: toRem(700);
+       margin: 0 auto; 
+    }
+	}
+  // .thanks__title
+  &__title {
+  }
+  // .thanks__txt
+  &__txt {
+    text-align: center;
+    font-size: toRem(28);
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: toRem(50);
+    span {
+      font-weight: 700;
+    }
+  }
+	// .thanks__button
+	&__button {
+    @media (min-width:$mobile){
+      position: relative;
+      &::after {
+        content:'';
+        position: absolute;
+        top: -80%;
+        right: 9%;
+        background-image: url(../img/icon/arrow-dwn.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        display: block;
+        width: 15%;
+        height: 145%;
+      }
+    }
+	}
+  // .thanks__link
+  &__link {
+    @media (min-width:$mobileSmall){
+       max-width: toRem(340);
+       margin: 0 auto; 
+    }
+  }
+}
+
+
+// === OFFER PAGE =============================
+.offer {
+  @include adaptiveValue("padding-top", 150, 125);
+  @include adaptiveValue("padding-bottom", 125, 40);
+  // .offer__container
+  &__container {
+  }
+  // .offer__item
+  &__item {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+  // .offer__title
+  &__title {
+  }
+  // .offer__txt
+  &__txt {
+    @include adaptiveValue("font-size", 18,14);
+    line-height: normal;
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+  // .offer__list
+  &__list {
+  }
+	// .offer__li
+	&__li {
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+	}
+}
+
+.title-sm {
+  @include adaptiveValue("font-size", 30, 24);
+  font-weight: 700;
+  margin-bottom: toRem(20);
+}

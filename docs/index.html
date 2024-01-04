@@ -5,10 +5,8 @@
 	<title>SMM-двіж</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240103215754">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240104132503">
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -17,7 +15,9 @@
 		<header data-scroll="10" class="header">
 			<div class="header__container">
 				<div class="header__first">
-					<img class="header__logo" src="img/icon/logo.svg" alt="logo">
+					<a href="index.html" class="header__logo-link">
+						<img class="header__logo" src="img/icon/logo.svg" alt="logo">
+					</a>
 					<p class="header__txt">Перша в Україні<br> ком'юніті агенція</p>
 				</div>
 				<div class="header__start start-header">
@@ -315,7 +315,7 @@
 					<h2 class="form__title title-main">
 						Анткета передзапису
 					</h2>
-					<form data-dev data-popup-message="#form-message" action="#" method="POST">
+					<form data-dev action="#" method="POST">
 						<div class="form__body">
 							<div class="form__item">
 								<input type="text" name="name" data-error="Заповни поле" data-required placeholder="Ім'я та прізвище" class="form__input input">
@@ -353,31 +353,13 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<p class="footer__txt">SMM-двіж</p>
-				<a href="#" class="footer__link">Договір оферти</a>
-				<a href="#" class="footer__link">Політика конфіденційності</a>
+				<a href="offer.html" class="footer__link">Договір оферти</a>
+				<a href="offer.html" class="footer__link">Політика конфіденційності</a>
 				<p class="footer__txt"> © OMG Agency</p>
 			</div>
 		</footer>
 	</div>
-	<div id="form-message" aria-hidden="true" class="popup popup-msg">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<div class="popup-msg__body">
-					<h3 class="popup-msg__title title-main">
-						Твоя анкета надіслана :)
-					</h3>
-					<p class="popup-msg__txt">
-						Доєднуйся до каналу-передзапису «SMM-двіжу»,
-						<span>там тебе вже очікує крутий бонус!</span>
-					</p>
-					<a href="https://t.me/+2mfy9t--M1tjOTBi" class="popup-msg__link btn btn_02">
-						<span>Канал передзапису</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="js/app.min.js?_v=20240103215754"></script>
+	<script src="js/app.min.js?_v=20240104132503"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 55;
+  z-index: 10;
   @include adaptiveValue("padding-top", 15, 10,0,$containerWidth,480);
   @include adaptiveValue("padding-bottom", 15, 10,0,$containerWidth,480);
     background-color: #fff;
@@ -26,6 +26,10 @@
   // .header__last
   &__last {
   }
+	// .header__logo-link
+	&__logo-link {
+    display: inline-block
+	}
 	// .header__logo
 	&__logo {
     @include adaptiveValue("width", 70, 44,0,$containerWidth,480);
@@ -56,6 +60,11 @@
   &__button {
     @include adaptiveValue("min-width", 250, 150,2,$containerWidth,768.98);
     height: auto;
+    &::before {
+      ._header-scroll & {
+        background-color: $green !important;
+      }
+    }
     @media (max-width:$mobile){
        width: toRem(44);
        height: toRem(44);
@@ -71,7 +80,7 @@
     @media (any-hover: hover){
       &:hover{
         ._header-scroll & {
-          border-color: #fff !important;
+          color: #000 !important;
         }
       }
     }
