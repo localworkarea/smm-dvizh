@@ -70,3 +70,24 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+
+body {
+	// для Firefox
+  // scrollbar-width: thin; 
+	// цвет полосы и фона для Firefox
+  // scrollbar-color: #703333 #ce4949;
+}
+
+// Стили для WebKit (Chrome, Safari, Edge)
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+	border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}

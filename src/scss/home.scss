@@ -366,7 +366,7 @@
       text-align: center;
       img {
         border-radius: 50%;
-        border: toRem solid #D694FF;
+        border: toRem(1) solid #D694FF;
         opacity: 0.6;
         background-image: linear-gradient(180deg, rgba(214, 148, 255, 0.40) 0%, rgba(214, 148, 255, 0.00) 100%);
         backdrop-filter: blur(25px);
