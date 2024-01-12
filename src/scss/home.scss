@@ -167,6 +167,34 @@
   }
   // .about__link
   &__link {
+    overflow: hidden;
+    position: relative;
+    max-width: toRem(700);
+    width: 100%;
+    iframe {
+      background-color: #000;
+      width: 100%;
+      border-radius: toRem(20);
+      border: toRem(2) solid #000;
+      @media (min-width:$mobileSmall){
+        min-height: toRem(392);
+      }
+      @media (max-width:$mobileSmall){
+         height: 250px; 
+      }
+    }
+    @media (any-hover: hover){
+      &:hover{
+        .link-about__poster {
+          transform: scale(1.1);
+        } 
+        .link-about__play {
+          rect {
+            fill: #000;
+          }
+        }
+      }
+    }
     &:not(:last-child) {
       margin-bottom: toRem(20);
     }
@@ -189,44 +217,24 @@
   }
 }
 
-.link-about {
-  position: relative;
-  overflow: hidden;
-  border-radius: toRem(20);
-  border: toRem(2) solid #000;
-  @media (any-hover: hover){
-    &:hover{
-      .link-about__poster {
-        transform: scale(1.1);
-      } 
-      .link-about__play {
-        rect {
-          fill: #000;
-        }
-      }
-    }
-  }
-  // .link-about__poster
-  &__poster {
-    max-width: 100%;
-    transition: transform .6s ease;
-  }
-  // .link-about__play
-  &__play {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @media (max-width:$mobileSmall){
-       width: toRem(80); 
-       height: toRem(80); 
-    }
-    rect {
-      transition: fill .3s;
-    }
-  }
-}
+// .link-about {
+//   // .link-about__play
+//   &__play {
+//     position: absolute;
+//     z-index: 1;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     pointer-events: none;
+//     @media (max-width:$mobileSmall){
+//        width: toRem(80); 
+//        height: toRem(80); 
+//     }
+//     rect {
+//       transition: fill .3s;
+//     }
+//   }
+// }
 
 // ===============================
 .wants {
