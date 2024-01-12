@@ -602,12 +602,12 @@
     }
     img {
       width: 100%;
-      @media (max-width:$mobileSmall){
-         width: 150%; 
-         position: relative;
-         left: 50%;
-         transform: translateX(-50%);
-      }
+      // @media (max-width:$mobileSmall){
+      //    width: 150%; 
+      //    position: relative;
+      //    left: 50%;
+      //    transform: translateX(-50%);
+      // }
     }
   }
   // .levels__list
@@ -894,11 +894,6 @@
     background-color: #8f8e8e;
     position: absolute;
 	}
-}
-.video__progress {
-}
-
-.video__progress-bar {
 }
 
 // ===============================

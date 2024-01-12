@@ -1922,15 +1922,6 @@ textarea {
     height: 15.1875rem;
   }
 
-  .levels__circle img {
-    width: 150%;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-
   .levels__item-top::before {
     width: 1rem;
     height: 1rem;
