@@ -587,20 +587,18 @@
   }
   // .levels__circle
   &__circle {
-    @media (max-width: em(950.98)){
+    @media (max-width: em(950.98)) and (min-width:em(650.98)){
       display: flex;
       flex-direction: column;
-    }
-    @media (max-width: em(950.98)) and (min-width:em(650.98)){
       justify-content: center; 
-    }
-    @media (max-width: em(650.98)){
-        align-items: center;
     }
     img {
       width: 100%;
       @media (max-width:$mobileSmall){
          width: 150%; 
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
       }
     }
   }

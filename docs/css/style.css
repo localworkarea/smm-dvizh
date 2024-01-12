@@ -1750,16 +1750,6 @@ textarea {
 }
 
 @media (max-width: 59.43625em) {
-  .levels__circle {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .levels__line {
     display: none;
   }
@@ -1845,12 +1835,6 @@ textarea {
 @media (max-width: 40.68625em) {
   .levels {
     background-position: center 93%;
-  }
-
-  .levels__circle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 
   .levels__item-top::before {
@@ -1953,6 +1937,11 @@ textarea {
 
   .levels__circle img {
     width: 150%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 
   .levels__item-top::before {
@@ -2514,6 +2503,13 @@ textarea {
 
 @media (max-width: 59.43625em) and (min-width: 40.68625em) {
   .levels__circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
