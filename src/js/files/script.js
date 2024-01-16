@@ -3,6 +3,25 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
+import lazyframe from "lazyframe";
+// Passing a selector
+lazyframe(".lazyframe");
+
+// Passing a nodelist
+let elements = document.querySelectorAll(".lazyframe");
+lazyframe(elements);
+
+// lazyframe(elements, {
+//     debounce: 250,
+//     lazyload: true,
+//     autoplay: true,
+  
+//     // Callbacks
+//     onLoad: (lazyframe) => console.log(lazyframe),
+//     onAppend: (iframe) => console.log(iframe),
+//     onThumbnailLoad: (img) => console.log(img),
+//   });
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   var videoItems = document.querySelectorAll('.video__item');
 
