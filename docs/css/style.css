@@ -801,6 +801,10 @@ h6 {
   font-style: italic;
 }
 
+.testimonials__item blockquote span {
+  font-style: normal;
+}
+
 .testimonials__item blockquote,
 .testimonials__item cite {
   font-style: normal;
