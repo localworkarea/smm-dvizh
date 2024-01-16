@@ -896,6 +896,35 @@
 	}
 }
 
+// ================================
+.brands {
+  // .brands__container
+  &__container {
+  }
+  // .brands__title
+  &__title {
+    max-width: toRem(860);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // .brands__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px, 1fr));
+    column-gap: toRem(20);
+    row-gap: toRem(30);
+    @media (max-width:$mobileSmall){
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  // .brands__item
+  &__item {
+    img {
+      width: 100%;
+    }
+  }
+}
+
 // ===============================
 .how {
   background-color: $pink;
@@ -1024,6 +1053,27 @@
   // .form__item
   &__item {
   }
+	// .form__item--check
+	&__item--check {
+    display: flex;
+    gap: toRem(10);
+    @media (min-width:$mobileSmall){
+      margin-left: toRem(30);
+    }
+    label {
+      // font-size: toRem(16);
+    }
+    &_form__error {
+      
+    }
+	}
+  // .form__check-box
+  &__check-box {
+    flex: 0 0 auto;
+    width: toRem(20);
+    height: toRem(20);
+    accent-color: #000;
+  }
   // .form__input
   &__input {
   }
@@ -1052,7 +1102,6 @@
     }
   }
 }
-
 
 //<INPUT>
 input[type="text"],

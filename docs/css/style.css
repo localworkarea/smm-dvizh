@@ -814,6 +814,26 @@ h6 {
   position: absolute;
 }
 
+.brands__title {
+  max-width: 53.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brands__items {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  row-gap: 1.875rem;
+}
+
+.brands__item img {
+  width: 100%;
+}
+
 .how {
   background-color: #EFD4FF;
 }
@@ -886,6 +906,22 @@ h6 {
   display: -ms-grid;
   display: grid;
   gap: 0.625rem;
+}
+
+.form__item--check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.form__check-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #000;
 }
 
 .form__items {
@@ -1110,6 +1146,10 @@ textarea {
 
   .how__item:nth-child(1) .how__main {
     max-width: 21.25rem;
+  }
+
+  .form__item--check {
+    margin-left: 1.875rem;
   }
 
   .thanks__link {
@@ -1945,6 +1985,11 @@ textarea {
 
   .video__video {
     aspect-ratio: 350/500;
+  }
+
+  .brands__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
