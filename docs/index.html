@@ -5,7 +5,7 @@
 	<title>SMM-двіж</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240116154844">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240118141902">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -57,7 +57,13 @@
 						</div>
 					</div>
 					<div data-da=".hero__main,768.98,1" class="hero__img">
-						<picture><source srcset="img/chel-hero-2.webp" type="image/webp"><img src="img/chel-hero-2.png" alt="mans and girls"></picture>
+						<picture><source srcset="img/chel-hero-2.webp" type="image/webp"><img class="hero__image" src="img/chel-hero-2.png" alt="mans and girls"></picture>
+						<div class="hero__card card-hero">
+							<picture><source srcset="img/smile.webp" type="image/webp"><img class="card-hero__img" src="img/smile.png" alt="емодзі із зірочками в очах"></picture>
+							<p class="card-hero__txt">
+								Реєстрація на передзапис <span>безкоштовна</span> та надає найкращі умови
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -67,9 +73,12 @@
 						<h2 class="about__title title-main">
 							Дивись коротке відео про SMM-двіж та OMG-ком'юніті
 						</h2>
-						<div class="about__link lazyframe" data-src="https://www.youtube.com/embed/GHbifl_2jb0?si=m68_BU-Ym8quID49" data-ratio="16:9" data-thumbnail="img/video-main.jpg">
+						<!-- <div class="about__link lazyframe" data-src="https://www.youtube.com/embed/GHbifl_2jb0?si=m68_BU-Ym8quID49" 
+							data-ratio="16:9"  
+							data-thumbnail="img/video-main.jpg"> -->
+						<div class="about__link">
+							<iframe width="560" height="315" data-src="https://www.youtube.com/embed/GHbifl_2jb0?si=m68_BU-Ym8quID49" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay></iframe>
 						</div>
-
 						<p class="about__txt">
 							За 2 хвилини зрозумієш, що такого особливого ми готуємо на SMM-двіж
 						</p>
@@ -321,7 +330,7 @@
 							</div>
 							<blockquote>
 								<p>
-									"Тут я маю можливість працювати на високому рівні з класними брендами, а також з командою реалізовувати задумане...<br> Що може бути крутішим?" <span>&#128522;</span>
+									Тут я маю можливість працювати на високому рівні з класними брендами, а також з командою реалізовувати задумане...<br> Що може бути крутішим? <span>&#128522;</span>
 								</p>
 								<cite>
 									<b>Ксенія Король (SMM lead OMG agency)</b>
@@ -345,7 +354,7 @@
 							</div>
 							<blockquote>
 								<p>
-									"OMG Ком'юніті дало можливість працювати з провідними українськими брендами. Робити круті кейси та запустити свою власну агенцію" <span>&#128170;</span>
+									OMG Ком'юніті дало можливість працювати з провідними українськими брендами. Робити круті кейси та запустити свою власну агенцію <span>&#128170;</span>
 								</p>
 								<cite>
 									<b>Іван Сальницький (Head of digital OMG agency and CEO Growthy)</b>
@@ -369,7 +378,7 @@
 							</div>
 							<blockquote>
 								<p>
-									"Ком'юніті OMG дала можливість працювати з провідними та міжнародними брендами, а також запустити в партнерстві перший жіночий журнал у Телграмі" <span> &#128133;</span>
+									Ком'юніті OMG дала можливість працювати з провідними та міжнародними брендами, а також запустити в партнерстві перший жіночий журнал у Телграмі <span> &#128133;</span>
 								</p>
 								<cite>
 									<b>Анна Озарчук (Head of PM Telegram напрямку)</b>
@@ -563,7 +572,8 @@
 									<input type="email" name="email" data-error="Заповни поле" data-required="email" placeholder="E-mail" class="form__input input">
 								</div>
 								<div class="form__item">
-									<input type="tel" name="tel" data-error="Заповни поле" data-inputmask="'mask': '+38 (099) 999 99 99'" data-required placeholder="Телефон" class="form__input input">
+									<input id="phone" type="tel" name="tel" value="" data-error="Заповни поле" data-required class="form__input input tel">
+									<p id="output"></p>
 								</div>
 							</div>
 
@@ -572,7 +582,7 @@
 							</div>
 
 							<div class="form__item form__item--check">
-								<input id="formCheckBox" type="checkbox" name="agree" data-required required class="form__check-box">
+								<input id="formCheckBox" type="checkbox" checked name="agree" class="form__check-box">
 								<label for="formCheckBox">Погоджуюсь, щоб зі мною зв'язався менеджер SMM-двіжу</label>
 							</div>
 
@@ -599,8 +609,9 @@
 			</div>
 		</footer>
 	</div>
-	<script src="files/lazyframe.min.js?_v=20240116154844"></script>
-	<script src="js/app.min.js?_v=20240116154844"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.3/js/intlTelInput.min.js?_v=20240118141902"></script>
+	<!-- <script src="files/lazyframe.min.js?_v=20240118141902"></script> -->
+	<script src="js/app.min.js?_v=20240118141902"></script>
 </body>
 
 </html>
